@@ -1,0 +1,21 @@
+int main()
+{
+    int n; int i;
+    n = 100000;
+    i = 2;
+    while (i < n) {
+        int j; int c; int p;
+        j = 2;
+        p = 1; // 最初iは素数と仮定
+        c = j * j <= i; // 継続条件
+        while (c) {
+            p = i % j;
+            j = j + 1;
+            // 割り切れなくてかつj * j <= iなら反復を継続
+            c = 0;
+            if (p) if (j * j <= i) c = 1;
+        }
+        if (p) print i;
+        i = i + 1;
+    }
+}

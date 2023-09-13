@@ -1,0 +1,16 @@
+int main()
+{
+    int n;
+    n = 30;
+
+    int f1; // ひとつ前の項
+    int f2; // ふたつ前の項
+    f2 = 1; f1 = 1;
+    print f2; // パン
+    while (0 < n) { // カツ パン
+        int t;
+        t = f2; f2 = f1; f1 = t + f1;
+        n = n - 1;
+        print f2;
+    }
+}

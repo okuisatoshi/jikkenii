@@ -1,0 +1,16 @@
+int main()
+{
+    int a; int b;
+    a = 1071;
+    b = 1029;
+    while (0 < b) {
+        int t;
+        t = a;
+        a = b;
+        // b = t % bの計算
+        // t >= b == !(t < b) == t < b < 1
+        while (t < b < 1) t = t - b;
+        b = t;
+    }
+    print a; // 21
+}

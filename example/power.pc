@@ -1,0 +1,24 @@
+int main()
+{
+    int x;
+    int n;
+    int a;
+
+    x = 2;
+    n = 30;
+    a = 1;
+    while (0 < n) {
+        int y;
+        int t;
+
+        y = x;
+        t = 0;
+        while (0 < y) {
+            t = t + a;
+            y = y - 1;
+        } // t == a * x
+        a = t;
+        n = n - 1;
+    }
+    print a; // 1,073,741,824
+}

@@ -1,0 +1,19 @@
+int main()
+{
+    int x; int n; int m;
+    x = 2; n = 1234567890; m = 1234;
+
+    int a;
+    a = 1;
+    while (0 < n) {
+        int c;
+        c = n % 2;
+        while (c) { // if (n % 2)のシミュレート
+            a = a * x % m;
+            c = 0;
+        }
+        x = x * x % m;
+        n = n / 2;
+    }
+    print a; // 966
+}

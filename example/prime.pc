@@ -1,0 +1,25 @@
+int main()
+{
+    int n; int i;
+    n = 100000;
+    i = 2;
+    while (i < n) {
+        int j; int c; int p;
+        j = 2;
+        c = j < i < 1; // 終了条件 j >= i == !(j < i) == j < i < 1
+        p = 1; // 最初iは素数と仮定
+        while (c < 1) { // !c
+            // p = i % jの計算
+            p = i;
+            // j <= p == ! p < j == p < j < 1
+            while (p < j < 1) p = p - j;
+
+            j = j + 1;
+            c = p < 1;
+            c = j < i < 1 + c; // 終了条件は 割り切れた || j >= i
+        }
+        c = p;
+        while (c) { print i; c = 0; } // if(p)のシミュレート
+        i = i + 1;
+    }
+}

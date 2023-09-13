@@ -1,0 +1,13 @@
+int main()
+{
+    int a; int b;
+    a = 1071;
+    b = 1029;
+    while (0 < b) {
+        int t;
+        t = a;
+        a = b;
+        b = t % b;
+    }
+    print a; // 21
+}

@@ -38,15 +38,8 @@
 ├── Makefile
 ├── misc
 │   ├── cfg.sh
-│   ├── compile_flags.txt.sample
 │   ├── get_imgcat.sh
-│   ├── minify.sed
-│   ├── pc_to_c.sh
-│   ├── picoc_x64_stack
-│   │   ├── picoc_x64_memstack.c
-│   │   ├── picoc_x64_regstack.c
-│   │   └── README.txt
-│   └── to_opaque.sh
+│   └── pc_to_c.sh
 ├── picoc.c
 ├── picoc_pre1.c
 ├── picoc_pre2.c
@@ -62,6 +55,6 @@
     ├── README.md
     ├── tidwall_hashmap.c
     └── tidwall_hashmap.h
-.
 ```
+
 tidwallディレクトリ以下のファイルは[tidwall氏のハッシュ表実装](https://github.com/tidwall/hashmap.c)でMITライセンスです。

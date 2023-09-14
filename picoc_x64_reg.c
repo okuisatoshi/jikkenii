@@ -46,10 +46,10 @@ void restore_volatile()
 {
     // ローカル変数用に割り当てるcaller-saveレジスタの復帰
     // rspの16バイト整列を保持するように注意
-    printf("  pop r11\n");
-    printf("  pop r10\n");
-    printf("  pop r9\n");
-    printf("  pop r8\n");
+    printf("  pop  r11\n");
+    printf("  pop  r10\n");
+    printf("  pop  r9\n");
+    printf("  pop  r8\n");
 }
 
 void expect(int expected)
@@ -165,7 +165,6 @@ void while_st(void)
     ENTER("while_st()");
     int while_entry = lsuffix++;
     int while_end   = lsuffix++;
-    printf("  jmp .L.%d\n", while_entry);
 
     // whileループ冒頭のブロック
     printf(".L.%d:\n", while_entry);
@@ -255,7 +254,6 @@ void program(void)
 {
     ENTER("program()");
     printf("  .intel_syntax noprefix\n");
-    printf("  .data\n");
     printf("  .text\n");
     printf("fmt: .asciz \"%%d\\n\"\n");
     printf("  .global main\n");

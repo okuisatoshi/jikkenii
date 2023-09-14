@@ -143,7 +143,6 @@ void while_st(void)
     ENTER("while_st()");
     int while_entry = lsuffix++;
     int while_end   = lsuffix++;
-    printf("  jmp .L.%d\n", while_entry);
 
     // whileループ冒頭のブロック
     printf(".L.%d:\n", while_entry);
@@ -232,7 +231,6 @@ void program(void)
 {
     ENTER("program()");
     printf("  .intel_syntax noprefix\n");
-    printf("  .data\n");
     printf("  .text\n");
     printf("fmt: .asciz \"%%d\\n\"\n");
     printf("  .global main\n");

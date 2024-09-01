@@ -1,6 +1,5 @@
-CC := gcc
+#CC := clang-15
 CFLAGS := -Wall -std=c11 -O0 -g3 $(CFLAGS)
-#CFLAGS := -Wall -std=c11 -O0 -g3 -DDEBUG
 SHELL := /bin/bash
 
 picoc: scan.o hashmap.o tidwall_hashmap.o picoc.o

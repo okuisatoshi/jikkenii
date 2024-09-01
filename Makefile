@@ -1,4 +1,4 @@
-#CC := clang-15
+CC := clang-15
 CFLAGS := -Wall -std=c11 -O0 -g3 $(CFLAGS)
 SHELL := /bin/bash
 

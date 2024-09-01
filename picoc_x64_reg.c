@@ -254,6 +254,7 @@ void program(void)
 {
     ENTER("program()");
     printf("  .intel_syntax noprefix\n");
+    printf("  .section .note.GNU-stack, \"\", @progbits\n");
     printf("  .text\n");
     printf("fmt: .asciz \"%%d\\n\"\n");
     printf("  .global main\n");

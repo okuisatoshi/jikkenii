@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-//char *s = "Hello world";
+char *s = "Hello world";
 //char s[1024] = "Hello world";
-char s[1024] = "Hello";
+//char s[1024] = "Hello";
 
 int main()
 {

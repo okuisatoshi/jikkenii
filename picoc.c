@@ -15,11 +15,9 @@ int lsuffix = 1;       // ラベルの接尾番号
 #define MAX_TMP_LEN 16 // 値の一時名の最大長
 hashmap *hmap;         // 変数名と行番号の対を保存するハッシュ表
 
-// デバッグモードを有効にするには以下の行
-//#define DEBUG
-//をコメントアウトしてmake clean; makeする。あるいは
-// make clean; CFLAGS=-DDEBUG makeのようにしてコンパイルする
 // デバッグモードでは標準エラー出力に構文解析木が出力される
+// デバッグモードを有効にするには次の行をコメントアウトしてmake clean; makeする。
+//#define DEBUG
 int findent = 0;
 #ifdef DEBUG
 #define ENTER(f) { findent += 3; fprintf(stderr, "%*c|- %s\n", findent, ' ', f); }

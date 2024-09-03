@@ -2,12 +2,15 @@
 
 情報工学実験IIのコンパイラテーマで使用するコードです。
 ```
+.
+├── LICENSE
+├── Makefile
+├── README.md
 ├── codediff.sh
 ├── example
 │   ├── assign.pc
-│   ├── bpmod.c
 │   ├── bpmod.pc
-│   ├── cf
+│   ├── c
 │   │   ├── bpmod.c
 │   │   ├── fib.c
 │   │   ├── gcd.c
@@ -34,8 +37,6 @@
 ├── gdb_sample.c
 ├── hashmap.c
 ├── hashmap.h
-├── LICENSE
-├── Makefile
 ├── misc
 │   ├── cfg.sh
 │   ├── get_imgcat.sh
@@ -43,16 +44,13 @@
 ├── picoc.c
 ├── picoc_pre1.c
 ├── picoc_pre2.c
-├── picoc_x64_mem.c
-├── picoc_x64_reg.c
-├── README.md
 ├── scan.c
 ├── scan.h
 ├── testscan.c
 └── tidwall
-    ├── example.c
     ├── LICENSE
     ├── README.md
+    ├── example.c
     ├── tidwall_hashmap.c
     └── tidwall_hashmap.h
 ```

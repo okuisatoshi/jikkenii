@@ -3,7 +3,7 @@ int main()
     int x; int n; int m; int a;
 
     x = 2;
-    n = 1234567890;
+    n = 123456;
     m = 1234;
     a = 1;
     while (0 < n) {
@@ -20,5 +20,5 @@ int main()
         a = t;
         n = n - 1;
     }
-    print a; // 966
+    print a; // 496
 }

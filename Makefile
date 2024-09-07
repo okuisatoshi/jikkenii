@@ -29,6 +29,6 @@ test: picoc
 clean:
 	rm -rf *.o *~ picoc picoc_pre1 picoc_pre2 testscan a.out
 
-.PHONY: all test clean gtags htags clean_all
+.PHONY: all test clean
 
 

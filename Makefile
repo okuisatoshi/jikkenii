@@ -7,9 +7,6 @@ SHELL := /bin/bash
 picoc: scan.o hashmap.o tidwall_hashmap.o picoc.o
 	$(CC) $(CFLAGS) $^ -o $@
 
-picoc.wasm: scan.o hashmap.o tidwall_hashmap.o picoc.o
-	$(CC) $(CFLAGS) $^ -o $@ --sysroot=./wasi-sysroot --target=wasm32-wasi
-
 picoc_pre1: scan.o picoc_pre1.o
 	$(CC) $(CFLAGS) $^ -o $@
 

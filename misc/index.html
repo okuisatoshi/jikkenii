@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="UTF-8"></head>
+<body>
+    <textarea id="in" rows="18" cols="60"></textarea><br />
+    <button id="run">compile</button><br />
+    <textarea id="out" rows="24" cols="60"></textarea>
+
+    <script defer type="module">
+    import { init, runWasix } from "https://unpkg.com/@wasmer/sdk@latest/dist/index.mjs";
+
+    init();
+
+    const input   = document.getElementById('in');
+    const output  = document.getElementById('out');
+    const btn     = document.getElementById('run');
+    const encoder = new TextEncoder();
+    const picoc = await WebAssembly.compileStreaming(fetch('picoc.wasm'))
+
+    btn.addEventListener('click', async () => {
+        const run = await runWasix(picoc, {});
+        const stdin = run.stdin.getWriter();
+        await stdin.write(encoder.encode(input.value));
+        await stdin.close();
+        const { stdout } = await run.wait();
+        console.log(stdout);
+        output.value = stdout;
+    });
+    </script>
+</body>
+</html>
